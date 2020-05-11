@@ -31,7 +31,35 @@ For launch app just execute node following node command:
 ```    
 ~./TransferMoneyAPI$ node app.js
 ```
+```
+Once the app is running, for Swagger launch and get access for all end-points, 
+copy and paste next url en your browser:
 
+http://localhost:3000/api/#/
+
+As first step, you must go to: 
+http://localhost:3000/api/#/default/post_api_account_create 
+
+To create the two accounts that will be 
+used for transfer money (mongoose driver just take
+control over collections creation).
+
+To get Account balance:
+http://localhost:3000/api/#/default/get_api_account__accountNumber__getBalance
+
+To transfer money:
+http://localhost:3000/api/#/default/post_api_transaction_create
+
+To get all Account's transactions:
+http://localhost:3000/api/#/default/get_api_transaction__accountNumber__getAllByAccount
+
+To get all Account's sent transacions:
+http://localhost:3000/api/#/default/get_api_transaction__accountNumber__getSentByAccount
+
+To get all Account's received transcations:
+http://localhost:3000/api/#/default/get_api_transaction__accountNumber__getReceivedByAccount
+```
+Note: As you can see, the app is running locally
 
 ## Built With
 
