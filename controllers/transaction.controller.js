@@ -55,7 +55,7 @@ exports.createTransaction = function (req, res, next) {
                         }
 
                     var destBalance = {
-                        balance: account[0].balance + req.body.amount
+                        balance: Number(account[0].balance) + Number(req.body.amount)
                     }
         
                     Account.update({accountNumber: req.body.toAccount}, destBalance,
