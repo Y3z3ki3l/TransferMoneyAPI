@@ -1,86 +1,43 @@
 # TransferMoneyAPI
 API to perform money transaction between two accounts
 
-## Getting Started
+### Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+```
+This is an API for transfer money between two accounts. 
+It's a Restful API and it's based on MVC design pattern 
+and implements DAO layer approach for a better integration 
+and best practice coding.
+```
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+This API works with mongoose to persist data on a local database. So you must setting up a local MongoDB database.
 
 ```
-Give examples
+The database name has to be: transfermoney-app-db.
 ```
 
-### Installing
+Note: All collections will be generated automatically by mongoose driver once an account and transaction was created.
 
-A step by step series of examples that tell you how to get a development env running
+### Running
 
-Say what the step will be
+For launch app just execute node following node command:
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+```    
+~./TransferMoneyAPI$ node app.js
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Node.js](https://nodejs.org/es/) - The web back-end development environment used.
+* [express](https://maven.apache.org/) - Node framework.
+* [bodry-parser](https://rometools.github.io/rome/) - Body and params, request-resposne parser dependency.
+* [mongoose](https://rometools.github.io/rome/) - Used for object data modeling and generates databse queries.
+* [swagger-jsdoc](https://rometools.github.io/rome/) - Used to autogenerate documentation.
+* [swagger-ui-express](https://rometools.github.io/rome/) - Used to generate a Swagger UI documentation.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* **Franz Ezequiel Muñoz Gutierrez** - *email* - (franzmunoz@gmail.com)
