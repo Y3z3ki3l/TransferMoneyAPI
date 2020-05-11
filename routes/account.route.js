@@ -60,7 +60,7 @@ router.post('/account/create', account.create);
  *            name: accountNumber
  *            required: true
  *            schema:
- *              type: integer
+ *              type: int64
  *              minimum: 1
  *            description: The Account's number
  *      responses:

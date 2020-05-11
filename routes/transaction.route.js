@@ -54,12 +54,56 @@ router.post('/transaction/create', transaction.createTransaction);
 
 /**
  * @swagger
- *  /api/transaction/getAll:
+ *  /api/transaction/{accountNumber}/getAllByAccount:
  *   get:
+ *      parameters:
+ *          - in: path
+ *            name: accountNumber
+ *            required: true
+ *            schema:
+ *              type: int64
+ *              minimum: 1
+ *            description: The Account's number
  *      responses:
  *          200:
- *            description: All Transactions
+ *            description: All Account's Transactions
  */
-router.get('/transaction/getAll', transaction.geTransactions);
+router.get('/transaction/:accountNumber/getAllByAccount', transaction.geTransByAccountNum);
+
+/**
+ * @swagger
+ *  /api/transaction/{accountNumber}/getSentByAccount:
+ *   get:
+ *      parameters:
+ *          - in: path
+ *            name: accountNumber
+ *            required: true
+ *            schema:
+ *              type: int64
+ *              minimum: 1
+ *            description: The Account's number
+ *      responses:
+ *          200:
+ *            description: All Account's Sent Transactions
+ */
+router.get('/transaction/:accountNumber/getSentByAccount', transaction.getSentTransByAccount);
+
+/**
+ * @swagger
+ *  /api/transaction/{accountNumber}/getReceivedByAccount:
+ *   get:
+ *      parameters:
+ *          - in: path
+ *            name: accountNumber
+ *            required: true
+ *            schema:
+ *              type: int64
+ *              minimum: 1
+ *            description: The Account's number
+ *      responses:
+ *          200:
+ *            description: All Account's Received Transactions
+ */
+router.get('/transaction/:accountNumber/getReceivedByAccount', transaction.getReceivedTransByAccount)
 
 module.exports = router;

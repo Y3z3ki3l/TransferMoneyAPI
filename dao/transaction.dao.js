@@ -12,8 +12,16 @@ transactionSchema.statics = {
         this.find(query, cb);
     },
 
-    getAccountByBalance: function(query, cb) {
+    getAllByAccountNum: function(query, cb) {
         this.find(query, cb);
+    },
+
+    getSentByAccountNum: function(query, cd) {
+        this.find(query, cd);
+    },
+
+    getReceivedByAccountNum: function(query, cd) {
+        this.find(query, cd);
     },
 
     update: function(query, updateData, cb) {

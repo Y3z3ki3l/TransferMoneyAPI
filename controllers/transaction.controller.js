@@ -110,18 +110,54 @@ exports.createTransaction = function (req, res, next) {
 
 }
 
-exports.geTransactions = function (req, res, next) {
+exports.geTransByAccountNum = function (req, res, next) {
 
-    Transaction.get({}, function(err, transactions){
+    Transaction.getAllByAccountNum({$or: [{fromAccount: req.params.accountNumber}, 
+                                        {toAccount: req.params.accountNumber}]}, 
+        function(err, transactions){
 
-        if (err) {
+            if (err) {
+                res.json({
+                    error: err
+                })
+            }
             res.json({
-                error: err
+                transactions: transactions
             })
-        }
-        res.json({
-            transactions: transactions
-        })
+    })
+
+}
+
+exports.getSentTransByAccount = function (req, res, next) {
+
+    Transaction.getSentByAccountNum({fromAccount: req.params.accountNumber}, 
+        function(err, transactions){
+
+            if (err) {
+                res.json({
+                    error: err
+                })
+            }
+            res.json({
+                transactions: transactions
+            })
+    })
+
+}
+
+exports.getReceivedTransByAccount = function (req, res, next) {
+
+    Transaction.getReceivedByAccountNum({toAccount: req.params.accountNumber}, 
+        function(err, transactions){
+
+            if (err) {
+                res.json({
+                    error: err
+                })
+            }
+            res.json({
+                transactions: transactions
+            })
     })
 
 }
