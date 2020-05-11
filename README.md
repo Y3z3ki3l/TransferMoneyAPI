@@ -18,6 +18,10 @@ This API works with mongoose to persist data on a local database. So you must se
 The database name has to be: transfermoney-app-db.
 ```
 
+Collections:
+* accounts
+* transactions
+
 Note: All collections will be generated automatically by mongoose driver once an account and transaction was created.
 
 ### Running
@@ -32,11 +36,11 @@ For launch app just execute node following node command:
 ## Built With
 
 * [Node.js](https://nodejs.org/es/) - The web back-end development environment used.
-* [express](https://maven.apache.org/) - Node framework.
-* [bodry-parser](https://rometools.github.io/rome/) - Body and params, request-resposne parser dependency.
-* [mongoose](https://rometools.github.io/rome/) - Used for object data modeling and generates databse queries.
-* [swagger-jsdoc](https://rometools.github.io/rome/) - Used to autogenerate documentation.
-* [swagger-ui-express](https://rometools.github.io/rome/) - Used to generate a Swagger UI documentation.
+* [express](https://expressjs.com/es/) - Node framework.
+* [bodry-parser](https://www.npmjs.com/package/body-parser) - Body and params, request-resposne parser dependency.
+* [mongoose](https://mongoosejs.com/) - Used for object data modeling and generates databse queries.
+* [swagger-jsdoc](https://www.npmjs.com/package/swagger-jsdoc) - Used to autogenerate documentation (dependency).
+* [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express) - Used to generate a Swagger UI documentation (dependency).
 
 ## Authors
 
