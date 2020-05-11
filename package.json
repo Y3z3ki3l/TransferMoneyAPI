@@ -1,0 +1,26 @@
+{
+  "name": "transfermoneyapi",
+  "version": "1.0.0",
+  "description": "API to perform money transaction between two accounts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Y3z3ki3l/TransferMoneyAPI.git"
+  },
+  "author": "FranzMG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Y3z3ki3l/TransferMoneyAPI/issues"
+  },
+  "homepage": "https://github.com/Y3z3ki3l/TransferMoneyAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
+  }
+}
