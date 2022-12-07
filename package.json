@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/Y3z3ki3l/TransferMoneyAPI#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "mongoose": "^5.9.13",
     "swagger-jsdoc": "^4.0.0",
     "swagger-ui-express": "^4.1.4"
